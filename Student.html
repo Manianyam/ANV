@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <style>
+        h2 {
+            text-align: center;
+            color: blue;
+            margin-top: 50px;
+        }
+        form {
+            width: 400px;
+            margin: 20px auto;
+            padding: 25px;
+            border: 2px solid black;
+            border-radius: 30px;
+            background-color: white;
+        }
+        #dobLabel {
+            display: block;
+        }
+        .message {
+            display: block;
+            padding-bottom: 10px;
+        }
+        .gender-box {
+            padding-top: 10px;
+            display: block;
+        }
+        #paymentLabel {
+            display: block;
+            padding-top: 10px;
+        }
+        #courseSelect {
+            padding-top: 10px;
+            margin-top: 0px;
+        }
+        .course-style {
+            margin-top: 10px;
+            padding-top: 10px;
+        }
+        #fileLabel {
+            text-decoration: underline;
+            color: blue;
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        td {
+            text-align: center;
+            padding: 10px;
+        }
+        label{
+            display: block;
+            padding-top: 5px;
+            font-weight: bold;
+        }
+        .gender-box label{
+            font-weight: normal;
+           
+        }
+        .gender-box{
+            display: flex;
+            align-items: center;
+        }
+        .gender-box input{
+            margin-left: 5px;
+            margin-right: 15px;
+            width:15px;
+        }
+        input{
+            border-radius: 5px;
+            padding: 5px;
+            width: 50%;
+        }
+        textarea{
+            border-radius: 5px;
+            padding: 5px;
+            width: 100%;
+        }
+        .online{
+            display: flex;
+            align-items: center;
+            width:30px;
+           
+        }
+        .online input{
+            margin-right: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Student Registration</h2>
+    
+    <form id="regForm" onsubmit="myFunction(event)">
+         <label for="inputName">Name: </label>
+         <input type="text" id="inputName" placeholder="Enter Your Name"><br><br>
+         
+         <label for="inputEmail">Email: </label>
+         <input type="email" id="inputEmail" placeholder="Enter Your Email"><br><br>
+         
+         <label for="inputNumber">Mobile Number:</label>
+         <input type="tel" id="inputNumber" placeholder="Enter Your Number" pattern="[0-9]{10}"  ><br><br>
+         
+         <label for="inputPassword">Password:</label>
+         <input type="password" id="inputPassword" placeholder="Enter Your Password" minlength="6" maxlength="8" ><br><br>
+         
+         <label id="dobLabel" for="inputDob">Date of Birth:</label>
+         <input type="date" id="inputDob"><br><br>
+          <label id="sel">Select Gender:</label>
+         <div class="gender-box"> 
+            
+             <label for="Male" >Male</label>
+             <input type="radio" id="Male" name="Gender" value="Male" checked>
+             <label for="Female">Female</label>
+             <input type="radio" id="Female" name="Gender" value="Female">
+             <label for="Other">Other</label>
+             <input type="radio" id="Other" name="Gender" value="Other">
+         </div><br>
+         
+         <label id="paymentLabel">Payment Mode</label>
+         <div class="online">
+             <label for="online">Online</label>
+             <input type="checkbox" id="online" name="Mode" value="Online">
+             <label for="offline">Offline</label>
+             <input type="checkbox" id="offline" name="Mode" value="Offline"> <br>
+         </div><br>
+         
+         <label for="courseSelect">Select Course:</label>
+         <select class="course-style" id="courseSelect">
+             <option value="Select a Course">Select a Course</option>
+             <option value="CSE">CSE</option>
+             <option value="ECE">ECE</option>
+             <option value="EEE">EEE</option>
+             <option value="MECH">MECH</option>
+         </select><br><br>
+         
+         <label for="inputAddress">Enter Your Address</label><br>
+         <div class="message">
+             <textarea id="inputAddress" rows="5" cols="30" placeholder="Enter your address here"></textarea>
+         </div>
+      
+         Upload resume: 
+         <label id="fileLabel">Choose file
+             <input type="file" hidden>
+         </label><br><br>
+         
+         <label for="inputCity">Enter Your City:</label>
+         <input id="inputCity" type="text" list="cityDatalist" placeholder="Type your city">
+         <datalist id="cityDatalist">
+              <option value="Hyderabad">
+              <option value="Vijayawada">
+              <option value="Chennai">
+              <option value="Bangalore">
+         </datalist><br><br>
+         
+         <!-- Moved buttons back inside the form element -->
+         <button type="submit">Register</button>
+         <button type="button" onclick="if(confirm('Are you sure you want to reset?')) document.getElementById('regForm').reset();">Reset</button>
+    </form>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Mobile Number</th>
+                <th>Password</th>
+                <th>Date of Birth</th>
+                <th>Gender</th>
+                <th>Payment Mode</th>
+                <th>Course</th>
+                <th>Address</th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody id="table">
+            <tr>
+                <td id="TName">-</td>
+                <td id="TEmail">-</td>
+                <td id="TNumber">-</td>
+                <td id="TPassword">-</td>
+                <td id="TDob">-</td>
+                <td id="TGender">-</td>
+                <td id="Tmode">-</td>
+                <td id="Tcourse">-</td>
+                <td id="Taddress">-</td>
+                <td id="Tcity">-</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        let table=[];
+        function myFunction(event) {
+
+            event.preventDefault();
+            const nameValue = document.getElementById("inputName").value;
+            const emailValue = document.getElementById("inputEmail").value;
+            const numberValue = document.getElementById("inputNumber").value;
+            const passwordValue = document.getElementById("inputPassword").value;
+            const dobValue = document.getElementById("inputDob").value || 'N/A';
+            const courseValue = document.getElementById("courseSelect").value;
+            const addressValue = document.getElementById("inputAddress").value || 'N/A';
+            const cityValue = document.getElementById("inputCity").value || 'N/A';
+            const checkedGenderElement = document.querySelector('input[name="Gender"]:checked');
+            const genderValue = checkedGenderElement ? checkedGenderElement.value : 'N/A';
+          
+            let paymentModes = [];
+            document.querySelectorAll('input[name="Mode"]:checked').forEach((checkbox) => {
+                paymentModes.push(checkbox.value);
+            }); 
+            table.push({name:nameValue,email:emailValue,number:numberValue,password:passwordValue,dob:dobValue,gender:genderValue,mode:paymentModes,course:courseValue,address:addressValue,city:cityValue});
+            console.log(table);
+            const modeValue = paymentModes.length > 0 ? paymentModes.join(", ") : "None";
+            let newRow = '';
+            for (let i = 0; i < table.length; i++) {
+              let row=  
+         
+         `<tr>
+                      <td>${table[i].name}</td>
+                      <td>${table[i].email}</td>
+                      <td>${table[i].number}</td>
+                      <td>${table[i].password}</td>
+                      <td>${table[i].dob}</td>
+                      <td>${table[i].gender}</td>
+                      <td>${table[i].mode.join(", ") || "None"}</td>
+                      <td>${table[i].course}</td>
+                      <td>${table[i].address}</td>
+                      <td>${table[i].city}</td>
+                 </tr>`;
+                 newRow += row;
+            }
+            document.getElementById("table").innerHTML = newRow;
+        }
+    </script>
+</body>
+</html>

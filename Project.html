@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FRONT END</title>
+    <link rel="stylesheet" href="css.css">
+    
+</head>
+<body>
+
+ <header>
+          <div class="a">
+            <h1 >STUDENT <abbr id="erp" title="Enterprise Resource Planning">ERP</abbr>
+             <img id="img" src="download.jpg.jpeg" alt="erp logo" width="100">
+           </h1>
+           <nav >
+             <h2><a href="#register">Register</a> |
+             <a href="#login">Login</a></h2>
+           </nav>
+          </div>
+ </header>
+ <main>
+     <section class="about">
+          <h2>ABOUT STUDENT ERP</h2>
+          <p style="margin:5px; font-family: Tahoma, Verdana, sans-serif;"><abbr title="Enterprise Resource Planning">ERP</abbr> is a software system used to manage and organize information in an organization.Student <b>ERP</b> is a <q> management system designed for educational institutions</q> such as schools, colleges, and universities.<em>Student ERP helps educational institutions</em> manage student <b>registration, attendance, fees, examinations, and results.</b><ins>It makes academic activities easier, faster, and more efficient.</ins></p>
+          <br>
+          <h2 id="h">HTML Code Examples</h2>
+          <p ><strong>Example of Python Program</strong></p>
+          <pre >
+             <code >
+a=5
+b=3
+print(a*b)
+             </code>
+         </pre>
+         <h2>Special Symbols</h2>
+         <p>5&gt;3&lt;4<br>Tademark :&trade;<br>Copyright :&copy;<br>5+3&amp;8<br>&quot;ax+b=0&quot;</p>
+      </section>
+
+      <section >
+         <fieldset lass="reg">
+             <h2 >Student Registration</h2>
+             <form>
+                 <label id="Name">Name: </label>
+                 <input type="text" id="text" name="Name" placeholder="Enter Your Name"><br><br>
+                 <label id="Email">Email: </label>
+                 <input type="text" id="text" name="Email" placeholder="Enter Your Email"><br><br>
+                 <label id="Password">Password:</label>
+                 <input type="text" id="text" name="Password" placeholder="Enter Your Password"><br><br>
+                 <label for="dob">Date of Birth:</label>
+                 <input type="date" id="dob" name="dob">
+                 <label id="sel">Select Gender</label>
+                 <div class="gender">
+                     <label for="Male">Male:</label>
+                     <input type="radio" id="Male" name="Gender" value="Male">
+                     <label for="Female">Female:</label>
+                     <input type="radio" id="Female" name="Gender" value="Female">
+                     <label for="Other">Other:</label>
+                     <input type="radio" id="Other" name="Gender" value="Other">
+                 </div>
+                 <label id="p">Payment Mode</label>
+                 <div class="online">
+                     <label for="online">Online:</label>
+                     <input type="checkbox" id="online" name="Mode" value="online">
+                      <label for="offline">Offline:</label>
+                     <input type="checkbox" id="offline" name="Mode" value="offline"> <br>
+                 </div>
+                 <label for="course" >Select Course:</label>
+                 <select id="course" name="course">
+                     <option value="">Select a Course</option>
+                     <option value="CSE">CSE</option>
+                     <option value="ECE">ECE</option>
+                     <option value="EEE">EEE</option>
+                     <option value="MECH">MECH</option>
+                 </select>
+                 <label>Enter Your Address</label>
+                 <textarea name="address" rows="5" cols="30" placeholder="Enter your address here"></textarea> <br>
+                 <label for="Upload Study">Upload Study</label>
+                 <input type="file" name="Study Certificate">
+                 <label>Enter Your City</label>
+                 <input type="text" class="city" name="city"  list="city" placeholder="Type your city">
+                 <datalist id="city">
+                     <option value="Hyderabad">
+                      <option value="Vijayawada">
+                      <option value="Chennai">
+                      <option value="Bangalore">
+                 </datalist><br><br>
+                 <button onclick="alert('Successfully Register')" >Register</button>
+                 <button onclick="alert('Are you confirm to Reset')">Reset</button>
+             </form>
+          </fieldset>
+     </section>
+      <hr>
+     <section>
+         <h2 id="Login">Student Login</h2>
+         <form>
+             <label id="Name">Name: </label>
+             <input type="text" id="text" name="Name" placeholder="Enter Your Name"> <br><br>
+             <label id="Email">Email: </label>
+             <input type="text" id="text" name="Email" placeholder="Enter Your Email">  <br><br>
+             <label id="Password">Password:</label>
+              <input type="text" id="text" name="Password" placeholder="Enter Your Password">
+             <br><br>
+             <button type="submit">Login</button>
+         </form>
+     </section>
+     <hr>
+     <section >
+         <h2>Student Details</h2>
+         <form class="det">
+             <table border>
+                 <thead>
+                     <tr>
+                         <th>Name</th>
+                         <th>Course</th>
+                          <th>Email</th>
+                     </tr>
+                 </thead>
+                 <tbody>
+                     <tr >
+                          <td>MSD</td>
+                          <td>CSE</td>
+                          <td>Msd@gmail.com</td>
+                      </tr>
+
+                      <tr>
+                         <td>Mounika</td>
+                         <td>ECE</td>
+                         <td>mounika@gmail.com</td>
+                     </tr>
+                 </tbody>
+
+                  <tfoot>
+                      <tr>
+                         <th colspan="2">Total Students</th>
+                          <th>2</th>
+                     </tr>
+                 </tfoot>
+             </table>
+         </form>
+     </section>
+        <hr>
+     <section>
+         <form>
+              <h2>Course Section</h2>
+              <h3>Available Courses</h3>
+              <ol>
+                 <li>HTML</li>
+                   <li>CSS</li>
+                 <li>JavaScript</li>
+                  <li>Python</li>
+               </ol>
+             <h3>Available Techologies</h3>
+              <ul>
+                 <li>Front End</li>
+                 <li>Full Stack With Pyton</li>
+                 <li>Full Stack With JavaScript</li>
+                  <li>Full Stack With MERN</li>
+               </ul>
+             <h3>Web Development Courses</h3>
+              <dl>
+                    <dt>HTML</dt>
+                  <dd>Used to create the structure of web pages.</dd>
+                 <dt>CSS</dt>
+                   <dd>Used to style web pages with colors, fonts and layouts.</dd>
+                 <dt>JavaScript</dt>
+                  <dd>Used to add interactive features to web pages.</dd>
+               </dl>
+          </form>
+      </section>
+       <hr>
+      <section class="gallery">
+         <h2>Gallery</h2>
+          <fieldset class="img  ">
+               <img src="Courses.jpg.jpeg" alt=" Our Courses"  usemap="#coursesmap" width="300">
+              <map name="coursesmap">
+                 <area shape="rect" coords="20,20,180,150" href="html.html" alt="HTML Course"> 
+                 <area shape="rect" coords="200,20,380,150" href="css.html" alt="CSS Course">
+              </map>
+         </fieldset>
+         <fieldset>
+             <figure>
+                 <img src="frontend.jpg.jpeg" alt="frontend" width="300">
+                 <figcaption>Frontend development course</figcaption>
+             </figure>
+         </fieldset>
+         <fieldset>
+              <picture>
+                  <source media="(max-width: 600px)" srcset="backend.jpg.jpeg">
+                  <source media="(min-width: 100px)" srcset="backend.jpg.jpeg">
+                  <img src="backend.jpg.jpeg" alt="Backend" width="300">
+             </picture>
+         </fieldset>
+     </section>
+     <section>
+         <hr>
+         <h2>Media Section</h2>
+         <audio controls>
+             <source src="audio.mp3.mpeg" type="audio/mpeg">
+              Your browser does not support audio.
+         </audio><br>
+         <video width="400" controls>
+             <source src="video.mp4" type="video/mp4">
+             Your browser does not support video.
+             <track src="telugu.vtt" kind="subtitles" srclang="te" label="Telugu">
+         </video>
+         <br>
+         <iframe src=https://www.flipkart.com/" width="600" height="400" title="flipkart"></iframe>
+         <br>
+     </section>
+      <section>
+         <hr>
+           <h2>Progress Section</h2>
+          <label>Download Progress:</label>
+            <progress value="60" max="100"></progress>
+           <br>
+          <label>Battery Level:</label>
+         <meter value="70" min="0" max="100"></meter>
+          <br><br>
+          <form oninput="result.amount = Number(a.amount) + Number(b.amount)">
+             <label>First student:</label>
+             <input type="number" id="a" placeholder="1000"><br><br>
+             <label>Second student:</label>
+             <input type="number" id="b" placeholder="1200"> <br><br>
+             <label>Total:</label>
+             <output name="result" for="a b">2200</output>
+         </form>
+     </section>
+     <section>
+         <hr>
+         <h2>Advanced Section</h2>
+         <details>
+             <summary>HTML</summary>
+             <p>HTML stands for HyperText Markup Language.It is used to create web pages.</p>
+         </details>
+         <br>
+           <h3>Dialog</h3>
+         <button onclick="myDialog.showModal()">  Open Dialog </button>
+         <dialog id="myDialog">
+             <h3>Welcome!</h3>
+             <p>Welcome to our website.</p>
+             <button onclick="myDialog.close()">     Close</button>
+               <h3>Template</h3>
+              <template id="myTemplate"><p>Hello! Welcome to HTML.</p></template>
+         </dialog>
+           <br>
+            <h3>Canvas</h3>
+           <canvas id="myCanvas" width="300" height="150" style="border:2px solid;"></canvas>
+            <br>
+          <h3>Object</h3>
+          <object data="sample1.pdf" type="application/pdf" width="600" height="400">
+          <p>PDF cannot be displayed.
+           <a href="sample.pdf">Open PDF</a></p>
+         </object>
+          <br>
+         <h3>Embed</h3>
+         <embed src="sample.pdf" type="application/pdf" width="600" height="400">
+         <br>
+         <h3>Iframe</h3>
+         <iframe width="560" height="315" src="https://www.youtube.com/embed/lGKGDxwvrEQ?si=WUOPM0duE-UJfOGE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+     </section>  
+ </main>
+    <hr>
+   <footer>
+        <section>
+             <h3>Footer</h3>
+          <h4>Contact Details</h4>
+          <p><strong>Contact:</strong>9876543210</p>
+          <address> Hyderabad, Telangana</address>
+         <p><b>Email:</b>example@gmail.com</p>
+         <p>&copy; 2026 My Website. All rights reserved.</p>
+     
+        </section>
+        
+    </footer>
+</body>
+</html>
